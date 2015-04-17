@@ -28,8 +28,6 @@ describe('server', function() {
   it('should send an object containing a `results` array', function(done) {
     request('http://127.0.0.1:3000/classes/messages', function(error, response, body) {
       parsedBody = JSON.parse(body);
-      console.log("body:", body);
-      console.log("response:", response);
       expect(parsedBody).to.be.an('object');
       expect(parsedBody.results).to.be.an('array');
       done();
@@ -62,7 +60,6 @@ describe('server', function() {
       // Now if we request the log, that message we posted should be there:
       request('http://127.0.0.1:3000/classes/messages', function(error, response, body) {
           var messages = JSON.parse(body).results;
-          console.log("body:" + body);
           expect(messages[0].username).to.equal('Jono');
           expect(messages[0].message).to.equal('Do my bidding!');
           done();

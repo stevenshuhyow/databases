@@ -5,7 +5,7 @@ body {
     font-family: arial, sans-serif;
 }
 
-#main {
+#main, #chats {
     width: 500px;
     margin: auto;
     text-align: left;
@@ -47,9 +47,9 @@ body {
 }
 
 form {
-    padding: 5px;
+    padding: 20px;
     padding-left: 0;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 form input[type=text] {
@@ -57,29 +57,16 @@ form input[type=text] {
     width: 70%;
     font-size: 12px;
     padding: 5px;
-    float:left;
 }
 
-button {
-    float:right;
-}
-
-#chat {
+.chat {
     padding: 5px;
-    height: 350px;
-    width: 150px;
     margin-bottom: 5px;
     background-color: #eee;
-    overflow: scroll;
-    display:block;
 }
 
-.username {
-    position: relative;
-    font-weight: 200;
-    display: block;
-    padding: 5px;
-    border: solid blue 2px;
+.chat .username {
+    font-weight: 800;
 }
 
 .chat:hover {
